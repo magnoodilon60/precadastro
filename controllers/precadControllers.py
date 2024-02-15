@@ -34,9 +34,9 @@ def Incluir(precadastro):
     db.conexao.commit() # editando o banco de dados
     # resultado = cursor.fetchall() #ler o banco de dados
 
-    db.cursor.close()
+    #db.cursor.close()
 
-    db.conexao.close()
+    #db.conexao.close()
 
 
     # db.cursor.execute(f"""INSERT INTO visitante (nome, cpf, empresa, setor, DataEntrada, HoraEntrada) 
