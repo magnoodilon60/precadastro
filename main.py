@@ -2,10 +2,18 @@ from datetime import datetime
 import streamlit as st
 import controllers.precadControllers as precadControllers
 import models.precadmanual as precadastro
+import services.secrets as secrets
 
 
+# No meia o titulo da pagina
 st.set_page_config(
     page_title="Ajuste Pré-cadaastro")
+
+# chama a função de login
+secrets.check_password()
+
+
+#titulo central da pagina
 st.title('Ajustar Pré-cadastro de Pacientes')
 
 with st.form(key='Include_Paciente'):
