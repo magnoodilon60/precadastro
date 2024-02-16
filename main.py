@@ -1,22 +1,17 @@
 from datetime import datetime
 import streamlit as st
-import streamlit_shadcn_ui as ui
 import controllers.precadControllers as precadControllers
 import models.precadmanual as precadastro
-# from services.database import cursor
-# import pandas as pd
 
-st.title('Cadastro de Pacientes')
 
-#dt = ui.date_picker(key="date_picker", label="Data do Pré-Cadastro")
+st.set_page_config(
+    page_title="Ajuste Pré-cadaastro")
+st.title('Ajustar Pré-cadastro de Pacientes')
 
 with st.form(key='Include_Paciente'):
     input_NumPac = st.text_input(label="Insira o NumPac para o dia seguinte: ")
-    input_DataColeta = st.text_input(label="Insira a Data da Coleta Ex: 2024-02-11 ")
-    
-    #input_DataColeta =  st.write(dt)
-    #input_HoraColeta = st.text_input(label="Insira o nome da empresa: ")
-    #input_DataEntrega = st.selectbox("Selecione o Setor: ", ["Bioquimica", "Hormonio", "Hematologia", "Urina - parasitologia", "Microbiologia"])
+    input_DataColeta = st.date_input(label="Escolha a Data da Coleta: ")
+    input_DataColeta = (str(input_DataColeta))
     input_button_submit = st.form_submit_button('Cadastrar')
 
 
